@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "testpath": ["/application/modules/default/test"]
+    }
+  }
+}
