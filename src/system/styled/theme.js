@@ -18,7 +18,7 @@ const theme = {
   },
   height: {
     row: '3rem',
-    elementSmall: '2rem',
+    elementSmall: '2.25rem',
   },
   padding: {
     elementSmall: '1rem',
