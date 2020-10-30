@@ -38,7 +38,7 @@ const httpCall = (type, call, data = null) => {
 
     headers = {
       ...headers,
-      // 'Access-Control-Allow-Origin': 'http://staging.traction.network:81',
+      'Access-Control-Allow-Origin': 'https://apirishan.free.beeceptor.com',
       'X-requested-with': 'XMLHttpRequest',
       'X-USER-TOKEN': session.authentication_token,
       'X-USER-EMAIL': session.email,
