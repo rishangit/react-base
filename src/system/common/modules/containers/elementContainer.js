@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
 
-export default styled.div`
+const ElementContainer = styled.div`
   display: flex;
-  width:100%;
+  width: 100%;
+  height: ${({ theme: { height } }) => height.elementContainer};
   ${({ col }) =>
     col &&
     css`
@@ -12,5 +13,7 @@ export default styled.div`
     row &&
     css`
       flex-direction: row;
-    `}
+    `};
 `;
+
+export { ElementContainer };

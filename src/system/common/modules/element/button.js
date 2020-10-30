@@ -41,11 +41,29 @@ export default styled.button`
       &:hover {
         color: ${color.light};
         border-color: ${color.positive};
-        background-color: ${color.positive};
+        background-color: ${color.positiveLightX};
       }
       &:active {
         border-color: ${color.positiveDark};
         background-color: ${color.positiveDark};
+      }
+    `}
+
+
+    ${({ theme: { color }, danger }) =>
+    danger &&
+    css`
+      background-color: ${color.light};
+      border-color: ${color.danger};
+      color: ${color.danger};
+      &:hover {
+        color: ${color.light};
+        border-color: ${color.danger};
+        background-color: ${color.dangerLightX};
+      }
+      &:active {
+        border-color: ${color.dangerDark};
+        background-color: ${color.dangerDark};
       }
     `}
 `;

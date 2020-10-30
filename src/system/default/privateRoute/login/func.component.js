@@ -1,14 +1,19 @@
-import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Route, Redirect, useLocation } from 'react-router-dom';
 import { Urls } from '../../../common/constant';
+
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  debugger;
+  const location = useLocation();
+  const session = localStorage.getItem('session');
+
+  if(!session){
+    localStorage.setItem('redirectPath',location.pathname);
+  }
+
   return (
     <Route
       {...rest}
       render={props => {
-        const session = localStorage.getItem('session');
-        console.log('session', session);
         return session ? (
           <Component {...props} />
         ) : (

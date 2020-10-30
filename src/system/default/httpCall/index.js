@@ -1,2 +1,2 @@
-import { httpPost, httpGet } from './httpCall';
-export { httpPost, httpGet };
+import { httpPost, httpGet, httpDelete, httpPut, apiStatus } from './httpCall';
+export { httpPost, httpGet, httpDelete, httpPut, apiStatus };

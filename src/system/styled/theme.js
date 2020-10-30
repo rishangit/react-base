@@ -3,12 +3,15 @@ const theme = {
     light: '#ffffff',
     dark: '#292a31',
     positive: '#069697',
+    positiveLightXX: '#e8f5f5',
+    positiveLightX: '#bbe2e2',
     positiveLight: '#33a9a9',
     positiveDark: '#057b7c',
     border: '#d2d2d6',
     borderLight: '#e1e1e3',
     borderDark: '#b4b4bb',
     danger: '#f44336',
+    dangerLightX: '#fccbcb',
     dangerLight: '#f6655a',
     dangerDark: '#c8372d',
     pannelLight: '#f0f1f9',
@@ -19,16 +22,22 @@ const theme = {
   height: {
     row: '3rem',
     elementSmall: '2.25rem',
+    elementContainer: '5rem',
+    header:'4rem',
+    iconSmall:'1.75rem',
+    iconMedium:'2.5rem',
   },
   padding: {
     elementSmall: '1rem',
     elementMedium: '2rem',
+    container:'2rem',
   },
   margin: {
     elementSmall: '0.5rem',
     elementMedium: '2rem',
     small: '1rem',
     medium: '2rem',
+    container:'2rem',
   },
   radius: {
     small: '0.2rem',
@@ -37,6 +46,14 @@ const theme = {
   fontSize: {
     elementSmall: '1rem',
     elementLabel: '1rem',
+    message: '0.75rem',
+  },
+  fontFamily: {
+    thin: 'lato-thin',
+    light: 'lato-light',
+    regular: 'lato-regular',
+    bold: 'lato-bold',
+    hard: 'lato-black',
   },
 };
 

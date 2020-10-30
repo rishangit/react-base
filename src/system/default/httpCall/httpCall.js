@@ -1,12 +1,20 @@
 import { serverPath, version } from '../constant/constant';
 import { ajax } from 'rxjs/ajax';
 
-const httpPost = (call, data) => {
+const httpPost = ({ call, data }) => {
   return httpCall('POST', call, data);
 };
 
-const httpGet = call => {
+const httpGet = ({ call }) => {
   return httpCall('GET', call);
+};
+
+const httpDelete = ({ call }) => {
+  return httpCall('DELETE', call);
+};
+
+const httpPut = ({ call, data }) => {
+  return httpCall('PUT', call, data);
 };
 
 const httpCall = (type, call, data = null) => {
@@ -24,21 +32,19 @@ const httpCall = (type, call, data = null) => {
   }
 
   const sessionString = localStorage.getItem('session');
+  request_url = `${request_url}/${version}/${call}`;
   if (sessionString) {
     const session = JSON.parse(sessionString);
-    request_url = `${request_url}/api/${version}/${call}`;
+
     headers = {
       ...headers,
-      'Access-Control-Allow-Origin': 'http://staging.traction.network:81',
+      // 'Access-Control-Allow-Origin': 'http://staging.traction.network:81',
       'X-requested-with': 'XMLHttpRequest',
       'X-USER-TOKEN': session.authentication_token,
       'X-USER-EMAIL': session.email,
     };
-  } else {
-    request_url = `${request_url}/${call}`;
   }
 
-  // return of(call).pipe(throttleTime(10), (map) =>
   return ajax({
     url: request_url,
     crossDomain: true,
@@ -52,4 +58,8 @@ const httpCall = (type, call, data = null) => {
     },
   });
 };
-export { httpPost, httpGet };
+
+const apiStatus = {
+  success: 200,
+};
+export { httpPost, httpGet, httpDelete, httpPut, apiStatus };

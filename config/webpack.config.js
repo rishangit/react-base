@@ -330,6 +330,10 @@ module.exports = function (webpackEnv) {
         'sys/element': path.resolve('src/system/common/modules/element'),
         'sys/form': path.resolve('src/system/common/modules/form'),
         'sys/title': path.resolve('src/system/common/modules/titles'),
+        'sys/container': path.resolve('src/system/common/modules/containers'),
+        'sys/hooks': path.resolve('src/system/common/hooks'),
+        'sys/formElement': path.resolve('src/system/common/modules/formElement'),
+        'sys/const': path.resolve('src/system/common/constant'),
         'react-native': 'react-native-web',
         // Allows for better profiling with ReactDevTools
         ...(isEnvProductionProfile && {

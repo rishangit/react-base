@@ -12,14 +12,26 @@ export default styled.input.attrs(({ type = 'text', placeholder = '' }) => ({
     border-color: ${color.positive};
     border-radius: ${radius.small};
     font-size: ${fontSize.elementSmall};
-    margin: ${margin.elementSmall} ${margin.elementSmall}
-      ${margin.elementMedium};
+    margin: ${margin.elementSmall};
     color: ${color.textLight};
 
     &:hover {
       border-color: ${color.positiveLight};
       color: ${color.text};
-      background-color: #e8f5f5;
+      background-color:${color.positiveLightXX};
+    }
+
+    &::placeholder {
+      opacity: 0.3; /* Firefox */
+    }
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      opacity: 0.3;
+    }
+
+    &::-ms-input-placeholder {
+      /* Microsoft Edge */
+      opacity: 0.3;
     }
   `}
 `;
