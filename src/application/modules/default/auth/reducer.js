@@ -18,7 +18,7 @@ const authReducer = (state = initState, action) => {
           localStorage.setItem('session', JSON.stringify(response));
           return {
             ...state,
-            session: payload,
+            session: response,
             loginStatus: LoginStatus.LOGIN_SUCCESS,
           };
         }

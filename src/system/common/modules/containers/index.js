@@ -7,3 +7,4 @@ export { FlexRow, ElementContainer };
 
 export { default as FormContainer } from './formContainer';
 export { default as Icon } from './icon';
+export { default as Image } from './image';

@@ -1,10 +1,14 @@
 import React from 'react';
-import { Icon } from 'sys/container';
+import { useSelector } from 'react-redux';
+import { Icon, Image } from 'sys/container';
 import { useDispatch } from 'react-redux';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import { logOutAttempt } from '../../auth/action';
 
 const LoggedUserComponent = props => {
+  const {
+    authReducer: { session },
+  } = useSelector(state => state);
   const dispatch = useDispatch();
   const handleLogout = e => {
     dispatch(logOutAttempt());
@@ -12,7 +16,11 @@ const LoggedUserComponent = props => {
 
   return (
     <Icon right onClick={handleLogout}>
-      <AccountCircleOutlinedIcon />
+      {session ? (
+        <Image alt={session.firstName} src={session.avatar} />
+      ) : (
+        <AccountCircleOutlinedIcon />
+      )}
     </Icon>
   );
 };

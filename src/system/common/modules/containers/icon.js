@@ -6,6 +6,8 @@ export default styled.div`
   align-items: center;
   ${({ theme: { height, color } }) => css`
     font-size: ${height.iconMedium};
+    width: ${height.iconMedium};
+    height: ${height.iconMedium};
     color: ${color.text};
     svg {
       font-size: inherit;
@@ -16,6 +18,8 @@ export default styled.div`
     small &&
     css`
       font-size: ${height.iconSmall};
+      width: ${height.iconSmall};
+      height: ${height.iconSmall};
     `}
 
     ${({ right }) =>
