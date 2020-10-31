@@ -26,11 +26,17 @@ const theme = {
     header:'4rem',
     iconSmall:'1.75rem',
     iconMedium:'2.5rem',
+    options:'2.25rem',
+  },
+  width:{
+    dropMenuMedium:'12rem',
   },
   padding: {
     elementSmall: '1rem',
     elementMedium: '2rem',
     container:'2rem',
+    dropMenu:'0.75rem',
+    labelSmall:'0.25rem',
   },
   margin: {
     elementSmall: '0.5rem',
@@ -38,6 +44,7 @@ const theme = {
     small: '1rem',
     medium: '2rem',
     container:'2rem',
+    labelSmall:'0.25rem',
   },
   radius: {
     small: '0.2rem',
@@ -47,6 +54,7 @@ const theme = {
     elementSmall: '1rem',
     elementLabel: '1rem',
     message: '0.75rem',
+    label:'1rem',
   },
   fontFamily: {
     thin: 'lato-thin',

@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet';
 import { ThemeProvider } from 'styled-components';
 import theme from './system/styled/theme';
 import GlobalStyle from './system/styled/globalStyles';
+import 'animate.css';
 
 function App() {
   return (

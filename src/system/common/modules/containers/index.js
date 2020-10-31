@@ -1,7 +1,9 @@
-import { FlexRow } from './flexContainer';
+import { FlexRow, FlexCol } from './flexContainer';
 import { ElementContainer } from './elementContainer';
+import { DropMenu, DropOption } from './dropMenu';
 
-export { FlexRow, ElementContainer };
+export { FlexRow, FlexCol, ElementContainer };
+export { DropMenu, DropOption };
 
 //defaults
 

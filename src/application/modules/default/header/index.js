@@ -15,7 +15,7 @@ const Header = styled.div`
 const HeaderComponent = props => {
   return (
     <Header>
-      Header
+      <div>Header</div>
       <LoggedUserComponent />
     </Header>
   );
